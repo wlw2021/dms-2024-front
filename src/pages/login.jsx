@@ -29,7 +29,7 @@ const LoginForm = () => {
         setMessage(`Login successful! CID: ${data.CID}`);
         setTimeout(() => {
           navigate('/choose', { state: { CID : data.CID } })
-        }, 500);
+        }, 1000);
       } else {
         const errorData = await response.json();
         setMessage(`Login failed: ${errorData.error}`);
@@ -51,7 +51,7 @@ const LoginForm = () => {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             required
-            style={{ width: "100%", padding: "8px", margin: "5px 0", borderRadius: "4px", border: "1px solid #ccc" }}
+            style={{ width: "90%", padding: "8px", margin: "5px 0", borderRadius: "4px", border: "1px solid #ccc" }}
           />
         </div>
         <div style={{ marginBottom: "10px" }}>
@@ -61,7 +61,7 @@ const LoginForm = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-            style={{ width: "100%", padding: "8px", margin: "5px 0", borderRadius: "4px", border: "1px solid #ccc" }}
+            style={{ width: "90%", padding: "8px", margin: "5px 0", borderRadius: "4px", border: "1px solid #ccc" }}
           />
         </div>
         <button
